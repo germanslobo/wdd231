@@ -1,0 +1,43 @@
+@media (min-width: 768px) {
+  #hamburger {
+    display: none;
+  }
+
+  header {
+    flex-wrap: nowrap;
+  }
+
+  nav {
+    display: block;
+    width: auto;
+  }
+
+  nav ul {
+    display: flex;
+    gap: 0.5rem;
+    margin: 0;
+  }
+
+  nav li {
+    border-top: none;
+  }
+
+  nav a {
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+  }
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1.5rem;
+  }
+
+  .certificate {
+    grid-column: span 2;
+  }
+
+  .course-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

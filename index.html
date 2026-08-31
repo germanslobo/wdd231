@@ -3,36 +3,82 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="WDD 231 Course Portal Page">
-  <meta name="author" content="Germán Gerardo Sánchez Lobo">
-  <title>WDD 231 - Web Frontend Development I</title>
+  <title>WDD 231 - Course Home Page</title>
+  <meta name="description" content="WDD 231 Course Home Page showcasing student profile and web development courses.">
+  <meta name="author" content="Germán Sánchez Lobo">
   
-  <link rel="stylesheet" href="styles/styles.css">
-  <script src="scripts/main.js" defer></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/larger.css">
+  
+  <script src="scripts/navigation.js" defer></script>
+  <script src="scripts/date.js" defer></script>
+  <script src="scripts/course.js" defer></script>
 </head>
 <body>
-
   <header>
-    <h1>WDD 231: Web Frontend Development I</h1>
-    <nav>
+    <div class="logo-container">
+      <img src="images/logo.svg" alt="Site Logo" width="40" height="40">
+      <span>Germán Sánchez Lobo</span>
+    </div>
+    <button id="hamburger" aria-label="Toggle Navigation menu">&#9776;</button>
+    <nav id="primary-nav">
       <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Projects</a></li>
+        <li class="active"><a href="index.html">Home</a></li>
+        <li><a href="chamber/index.html">Chamber Project</a></li>
+        <li><a href="final/index.html">Final Project</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <section>
-      <h2>Course Overview</h2>
-      <p>Welcome to the WDD 231 portal page.</p>
-    </section>
+    <h1>Home</h1>
+    <div class="grid-container">
+      <section class="card about">
+        <h2>About Me</h2>
+        <div class="card-content">
+          <p>Welcome! I am a software engineer and web development student passionate about building scalable, optimized, and responsive user experiences. I specialize in backend automations, trading algorithms, and modern frontend design.</p>
+        </div>
+      </section>
+
+      <section class="card photo">
+        <h2>Student Photo</h2>
+        <div class="card-content">
+          <img src="images/profile.webp" alt="Germán Sánchez Lobo" width="300" height="300" loading="lazy">
+        </div>
+      </section>
+
+      <section class="card certificate">
+        <h2>Web Certificate Courses</h2>
+        <div class="filters">
+          <button id="all-btn">All</button>
+          <button id="cse-btn">CSE</button>
+          <button id="wdd-btn">WDD</button>
+        </div>
+        <div id="courses-container" class="course-list"></div>
+        <p id="total-credits"></p>
+      </section>
+    </div>
   </main>
 
   <footer>
-    <p>&copy; <span id="currentyear"></span> Germán Sánchez Lobo | Venezuela</p>
+    <div class="social-links">
+      <a href="https://github.com" target="_blank" rel="noopener" aria-label="GitHub Profile">
+        <img src="images/github.svg" alt="GitHub" width="32" height="32" loading="lazy">
+      </a>
+      <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn Profile">
+        <img src="images/linkedin.svg" alt="LinkedIn" width="32" height="32" loading="lazy">
+      </a>
+      <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="X Profile">
+        <img src="images/instagram.svg" alt="X" width="32" height="32" loading="lazy">
+      </a>
+    </div>
+    <p>&copy; <span id="currentyear"></span> • Germán Sánchez Lobo • Venezuela</p>
     <p id="lastModified"></p>
   </footer>
-
 </body>
 </html>
