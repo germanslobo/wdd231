@@ -1,0 +1,28 @@
+{
+  "family_name": "Sanchez",
+  "move_in_date": "2019-04-24",
+  "number_of_people": 4,
+  "visited_by_bishopric": true,
+  "family_members": [
+    {
+      "name": "Vannessa Sanchez",
+      "gender": "Female",
+      "birthdate": "1990-05-15"
+    },
+    {
+      "name": "Salvador Sanchez",
+      "gender": "Male",
+      "birthdate": "1992-08-20"
+    },
+    {
+      "name": "Leonardo Sanchez",
+      "gender": "Male",
+      "birthdate": "1955-03-05"
+    },
+    {
+      "name": "Angelica Sanchez",
+      "gender": "Female",
+      "birthdate": "1990-11-10"
+    }
+  ]
+}
