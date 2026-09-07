@@ -18,19 +18,19 @@
   <meta property="og:description" content="Discover local businesses, services, and members in our Chamber of Commerce directory.">
 
   <!-- Style Sheets (Normalize first, then small, then larger) -->
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/small.css">
-  <link rel="stylesheet" href="css/larger.css">
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/larger.css">
 
   <!-- JavaScript -->
-  <script src="js/directory.js" defer></script>
+  <script src="scripts/directory.js" defer></script>
 </head>
 <body>
 
   <header>
     <div class="header-container">
       <img src="images/logo.svg" alt="Chamber Logo" class="logo" width="60" height="60">
-      <h1>Chamber of Commerce</h1>
+      <span class="site-title">Chamber of Commerce</span>
     </div>
     <button id="menu-btn" aria-label="Toggle Navigation Menu">☰</button>
     <nav id="nav-bar">
@@ -44,7 +44,8 @@
   </header>
 
   <main>
-    <h2>Business Directory</h2>
+    <!-- Single h1 moved inside main to pass audit -->
+    <h1>Business Directory</h1>
 
     <div class="view-toggle">
       <button id="grid-btn" class="active-view">Grid</button>
