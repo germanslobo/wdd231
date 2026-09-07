@@ -1,0 +1,25 @@
+@media (min-width: 640px) {
+  #menu-btn {
+    display: none;
+  }
+
+  nav {
+    display: block;
+    width: auto;
+  }
+
+  nav ul {
+    display: flex;
+    margin: 0;
+  }
+
+  nav li a {
+    padding: 0.5rem 1rem;
+  }
+
+  footer {
+    display: flex;
+    justify-content: space-around;
+    text-align: left;
+  }
+}

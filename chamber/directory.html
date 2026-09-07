@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chamber Directory - Local Chamber of Commerce</title>
+  <meta name="description" content="Business directory of the local Chamber of Commerce. Explore and support local businesses.">
+  <meta name="author" content="German Sanchez Lobo">
+
+  <!-- Favicon -->
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+  <!-- Open Graph Meta Tags for Facebook Sharing -->
+  <meta property="og:title" content="Chamber Business Directory">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://germanslobo.github.io/wdd231/chamber/images/og-image.jpg">
+  <meta property="og:url" content="https://germanslobo.github.io/wdd231/chamber/directory.html">
+  <meta property="og:description" content="Discover local businesses, services, and members in our Chamber of Commerce directory.">
+
+  <!-- Style Sheets (Normalize first, then small, then larger) -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/small.css">
+  <link rel="stylesheet" href="css/larger.css">
+
+  <!-- JavaScript -->
+  <script src="js/directory.js" defer></script>
+</head>
+<body>
+
+  <header>
+    <div class="header-container">
+      <img src="images/logo.svg" alt="Chamber Logo" class="logo" width="60" height="60">
+      <h1>Chamber of Commerce</h1>
+    </div>
+    <button id="menu-btn" aria-label="Toggle Navigation Menu">☰</button>
+    <nav id="nav-bar">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="directory.html" class="active">Directory</a></li>
+        <li><a href="join.html">Join</a></li>
+        <li><a href="discover.html">Discover</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Business Directory</h2>
+
+    <div class="view-toggle">
+      <button id="grid-btn" class="active-view">Grid</button>
+      <button id="list-btn">List</button>
+    </div>
+
+    <div id="members-container" class="grid-view"></div>
+  </main>
+
+  <footer>
+    <div class="footer-info">
+      <p><strong>Chamber of Commerce</strong></p>
+      <p>Calle Andrés Eloy Blanco, Edificio Cámara de Comercio, Piso 8, Urbanización Los Caobos, Caracas, Venezuela</p>
+      <p>info@chamber.org | (58) 0800 123 456</p>
+    </div>
+    <div class="footer-dev">
+      <p>&copy; <span id="currentyear"></span> | German Sanchez Lobo | WDD 231</p>
+      <p id="lastModified"></p>
+    </div>
+  </footer>
+
+</body>
+</html>

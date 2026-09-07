@@ -1,0 +1,56 @@
+[
+  {
+    "name": "Hacienda La Trinidad Parque Cultural",
+    "address": "Av. Rafael Rangel Sur, Urb. Sorokaima, La Trinidad",
+    "phone": "+58 424-1491206",
+    "website": "https://haciendalatrinidad.org",
+    "image": "images/hacienda-la-trinidad.webp",
+    "membership": 3,
+    "tagline": "Un Oasis Cultural e Histórico en la Ciudad"
+  },
+  {
+    "name": "Centro de Arte Los Galpones",
+    "address": "Avenida Ávila con 8va Transversal, Los Chorros",
+    "phone": "+58 212-2854394",
+    "website": "https://www.centrodeartelosgalpones.com",
+    "image": "images/los-galpones.webp",
+    "membership": 2,
+    "tagline": "Arte, Naturaleza y Encuentros Creativos"
+  },
+  {
+    "name": "Franca Las Mercedes",
+    "address": "Avenida Principal de Las Mercedes, Qta. Franca",
+    "phone": "+58 212-9918376",
+    "website": "https://franca.com.ve",
+    "image": "images/franca-cafe.webp",
+    "membership": 1,
+    "tagline": "Café de Especialidad y Pastelería Artesanal"
+  },
+  {
+    "name": "Pizpa • Comedy Club",
+    "address": "Av. San Juan Bosco, PB Edificio Yamin Gourmet, Altamira",
+    "phone": "+58 212-2645660",
+    "website": "http://www.pizpa.fun",
+    "image": "images/pizpa-comedy.webp",
+    "membership": 3,
+    "tagline": "Pizzas, Buenas Vibras y el Mejor Stand Up"
+  },
+  {
+    "name": "Sabor Escondido (El Hatillo)",
+    "address": "Calle Bella Vista, Pueblo de El Hatillo",
+    "phone": "+58 212-9636322",
+    "website": "https://example.com",
+    "image": "images/sabor-escondido.webp",
+    "membership": 2,
+    "tagline": "Gastronomía Tradicional con Toque Gourmet"
+  },
+  {
+    "name": "Ávila Burger (San Ignacio)",
+    "address": "C.C. San Ignacio, Nivel Blandín, La Castellana",
+    "phone": "+58 212-2631552",
+    "website": "https://avilaburger.com",
+    "image": "images/avila-burger.webp",
+    "membership": 1,
+    "tagline": "Las Hamburguesas del Cerro en la Ciudad"
+  }
+]
