@@ -1,28 +1,56 @@
-{
-  "family_name": "Sanchez",
-  "move_in_date": "2019-04-24",
-  "number_of_people": 4,
-  "visited_by_bishopric": true,
-  "family_members": [
-    {
-      "name": "Vannessa Sanchez",
-      "gender": "Female",
-      "birthdate": "1990-05-15"
-    },
-    {
-      "name": "Salvador Sanchez",
-      "gender": "Male",
-      "birthdate": "1992-08-20"
-    },
-    {
-      "name": "Leonardo Sanchez",
-      "gender": "Male",
-      "birthdate": "1955-03-05"
-    },
-    {
-      "name": "Angelica Sanchez",
-      "gender": "Female",
-      "birthdate": "1990-11-10"
-    }
-  ]
-}
+[
+  {
+    "name": "Ávila Burger",
+    "address": "Urbanización Los Palos Grandes, Caracas",
+    "phone": "+58 212-285-0000",
+    "website": "https://example.com/avilaburger",
+    "image": "images/avila-burger.webp",
+    "membership": 3,
+    "tagline": "Gourmet Venezuelan Burgers"
+  },
+  {
+    "name": "Franca Café",
+    "address": "Avenida Francisco de Miranda, Caracas",
+    "phone": "+58 212-263-1111",
+    "website": "https://example.com/francacafe",
+    "image": "images/franca-cafe.webp",
+    "membership": 2,
+    "tagline": "Specialty Coffee and Artisanal Bakery"
+  },
+  {
+    "name": "Hacienda La Trinidad",
+    "address": "Avenida Rafael Rísquez, Sorocaima, Caracas",
+    "phone": "+58 212-943-2222",
+    "website": "https://example.com/haciendalatrinidad",
+    "image": "images/hacienda-la-trinidad.webp",
+    "membership": 3,
+    "tagline": "Culture, Art, and Nature Center"
+  },
+  {
+    "name": "Centro de Arte Los Galpones",
+    "address": "Avenida Ávila, Los Chorros, Caracas",
+    "phone": "+58 212-285-3333",
+    "website": "https://example.com/losgalpones",
+    "image": "images/los-galpones.webp",
+    "membership": 2,
+    "tagline": "Contemporary Art and Cultural Foundation"
+  },
+  {
+    "name": "Pizpa Comedy",
+    "address": "Las Mercedes, Caracas",
+    "phone": "+58 212-993-4444",
+    "website": "https://example.com/pizpacomedy",
+    "image": "images/pizpa-comedy.webp",
+    "membership": 1,
+    "tagline": "Entertainment and Live Comedy"
+  },
+  {
+    "name": "Sabor Escondido",
+    "address": "La Castellana, Caracas",
+    "phone": "+58 212-261-5555",
+    "website": "https://example.com/saborescondido",
+    "image": "images/sabor-escondido.webp",
+    "membership": 2,
+    "tagline": "Unique Gastronomic Experience"
+  }
+]

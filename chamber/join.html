@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Join the Chamber - Chamber of Commerce</title>
+  <meta name="description" content="Join the local Chamber of Commerce. Membership application coming soon.">
+  <meta name="author" content="German Sanchez Lobo">
+
+  <!-- Favicon -->
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/larger.css">
+</head>
+<body>
+
+  <header>
+    <div class="header-container">
+      <img src="images/logo.svg" alt="Chamber Logo" class="logo" width="60" height="60">
+      <span class="site-title">Chamber of Commerce</span>
+    </div>
+    <button id="menu-btn" aria-label="Toggle Navigation Menu">☰</button>
+    <nav id="nav-bar">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="directory.html">Directory</a></li>
+        <li><a href="join.html" class="active">Join</a></li>
+        <li><a href="discover.html">Discover</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main style="text-align: center; padding: 4rem 1rem;">
+    <h1>Join the Chamber</h1>
+    <div style="background-color: var(--card-bg, #f9f9f9); border: 1px solid #ccc; border-radius: 8px; padding: 2rem; max-width: 600px; margin: 0 auto;">
+      <h2>Coming Soon!</h2>
+      <p>We are currently building our membership application form. Check back soon to register your business with the Chamber of Commerce.</p>
+      <a href="index.html" class="cta-btn" style="margin-top: 1rem; display: inline-block;">Return to Home</a>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-info">
+      <p><strong>Chamber of Commerce</strong></p>
+      <p>Calle Andrés Eloy Blanco, Edificio Cámara de Comercio, Piso 8, Caracas, Venezuela</p>
+      <p>info@chamber.org | (58) 0800 123 456</p>
+    </div>
+    <div class="footer-dev">
+      <p>&copy; <span id="currentyear"></span> | German Sanchez Lobo | WDD 231</p>
+      <p id="lastModified"></p>
+    </div>
+  </footer>
+
+  <script>
+    // Simple footer script for dates
+    document.getElementById('currentyear').textContent = new Date().getFullYear();
+    document.getElementById('lastModified').textContent = `Last Modification: ${document.lastModified}`;
+    
+    // Simple mobile menu toggle
+    const menuBtn = document.getElementById('menu-btn');
+    const navBar = document.getElementById('nav-bar');
+    menuBtn.addEventListener('click', () => {
+      navBar.classList.toggle('open');
+    });
+  </script>
+
+</body>
+</html>

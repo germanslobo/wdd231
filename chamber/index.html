@@ -3,10 +3,107 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Chamber Project Placeholder</title>
+  <title>Chamber of Commerce - Home</title>
+  <meta name="description" content="Welcome to the Chamber of Commerce. Discover local events, weather updates, and business spotlights.">
+  <meta name="author" content="German Sanchez Lobo">
+
+  <!-- Favicon -->
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+  <!-- Google Fonts API -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Chamber of Commerce - Home">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://germanslobo.github.io/wdd231/chamber/images/og-image.jpg">
+  <meta property="og:url" content="https://germanslobo.github.io/wdd231/chamber/index.html">
+  <meta property="og:description" content="Empowering businesses and supporting local community growth.">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/larger.css">
+
+  <!-- Scripts -->
+  <script src="scripts/home.js" defer></script>
 </head>
 <body>
-  <h1>Chamber of Commerce Project - Coming Soon</h1>
-  <p><a href="../index.html">Return to Home Page</a></p>
+
+  <header>
+    <div class="header-container">
+      <img src="images/logo.svg" alt="Chamber Logo" class="logo" width="60" height="60">
+      <span class="site-title">Chamber of Commerce</span>
+    </div>
+    <button id="menu-btn" aria-label="Toggle Navigation Menu">☰</button>
+    <nav id="nav-bar">
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="directory.html">Directory</a></li>
+        <li><a href="join.html">Join</a></li>
+        <li><a href="discover.html">Discover</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Single <h1> element for main content requirement -->
+    <h1>Chamber of Commerce Home</h1>
+
+    <!-- Hero Section with CTA -->
+    <div class="hero">
+      <img src="images/hero.webp" alt="City Skyline" width="1200" height="600">
+      <div class="cta-overlay">
+        <h2>Grow Your Business With Us</h2>
+        <a href="join.html" class="cta-btn">Join the Chamber</a>
+      </div>
+    </div>
+
+    <!-- Main Grid Content -->
+    <div class="home-grid">
+      <!-- Events Section -->
+      <section class="card events">
+        <h2>Current Events</h2>
+        <ul>
+          <li><strong>Annual Business Expo:</strong> Oct 15 at City Center</li>
+          <li><strong>Networking Breakfast:</strong> Every Tuesday at 8:00 AM</li>
+          <li><strong>Small Business Workshop:</strong> Nov 3 online</li>
+        </ul>
+      </section>
+
+      <!-- Weather Section -->
+      <section class="card weather">
+        <h2>Weather</h2>
+        <div id="weather-info">
+          <p>Loading current weather...</p>
+        </div>
+        <h3>3-Day Forecast</h3>
+        <div id="forecast-info">
+          <p>Loading forecast...</p>
+        </div>
+      </section>
+
+      <!-- Spotlights Section -->
+      <section class="spotlights-container">
+        <h2>Member Spotlights</h2>
+        <div id="spotlights" class="spotlight-grid"></div>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-info">
+      <p><strong>Chamber of Commerce</strong></p>
+      <p>Calle Andrés Eloy Blanco, Edificio Cámara de Comercio, Piso 8, Caracas, Venezuela</p>
+      <p>info@chamber.org | (58) 0800 123 456</p>
+    </div>
+    <div class="footer-dev">
+      <p>&copy; <span id="currentyear"></span> | German Sanchez Lobo | WDD 231</p>
+      <p id="lastModified"></p>
+    </div>
+  </footer>
+
 </body>
 </html>
