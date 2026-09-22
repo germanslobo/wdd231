@@ -7,7 +7,7 @@
   <meta name="description" content="Apply for membership in the local Chamber of Commerce. Choose from NP, Bronze, Silver, and Gold levels.">
   <meta name="author" content="German Sanchez Lobo">
 
-  <!-- Open Graph Meta Tags (Añadidas para corregir la auditoría) -->
+  <!-- Open Graph Meta Tags -->
   <meta property="og:title" content="Join the Chamber - Chamber of Commerce">
   <meta property="og:type" content="website">
   <meta property="og:image" content="https://germanslobo.github.io/wdd231/chamber/images/og-image.jpg">
@@ -96,11 +96,9 @@
         <!-- Campo oculto para la marca de tiempo (Timestamp) -->
         <input type="hidden" name="timestamp" id="timestamp">
 
-        <!-- Botón de envío modificado a etiqueta <button> para cumplir con el validador -->
         <button type="submit" class="submit-btn">Apply for Membership</button>
       </form>
 
-    
       <!-- Tarjetas de Niveles con Animación y Enlaces a Modales -->
       <div class="membership-cards">
         
@@ -129,6 +127,7 @@
         </div>
 
       </div>
+    </div> <!-- Cierre correcto de .join-container -->
 
     <!-- Modales HTML nativos (<dialog>) -->
     <dialog id="np-modal">
@@ -138,19 +137,19 @@
     </dialog>
 
     <dialog id="bronze-modal">
-      <h2>Bronze Membership Details</h2>
+      <h3>Bronze Membership Details</h3>
       <p>Ideal for small local startups. Includes directory listing, entry-level training workshops, and standard event invitations.</p>
       <button class="close-modal">Close</button>
     </dialog>
 
     <dialog id="silver-modal">
-      <h2>Silver Membership Details</h2>
+      <h3>Silver Membership Details</h3>
       <p>Offers increased advertising benefits, discounts on major chamber events, and specialized digital marketing training sessions.</p>
       <button class="close-modal">Close</button>
     </dialog>
 
     <dialog id="gold-modal">
-      <h2>Gold Membership Details</h2>
+      <h3>Gold Membership Details</h3>
       <p>The ultimate package! Includes premium homepage spotlight positions[cite: 7], VIP event access, free training sessions, and maximum organizational visibility.</p>
       <button class="close-modal">Close</button>
     </dialog>
