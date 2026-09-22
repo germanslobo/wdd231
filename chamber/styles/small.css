@@ -1,205 +1,117 @@
-:root {
-  --primary-color: #003366;
-  --secondary-color: #006699;
-  --accent-color: #e6f2ff;
-  --text-color: #333333;
-  --card-bg: #f9f9f9;
+/* Estilos del Formulario y Tarjetas de Membresía */
+.join-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
-body {
-  font-family: Arial, sans-serif;
-  color: var(--text-color);
-  margin: 0;
-  padding: 0;
+.join-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: var(--card-bg, #f9f9f9);
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
 }
 
-header {
-  background-color: var(--primary-color);
+.join-form label {
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  font-size: 0.95rem;
+  color: var(--text-color, #333);
+}
+
+.join-form input[type="text"],
+.join-form input[type="email"],
+.join-form input[type="tel"],
+.join-form select,
+.join-form textarea {
+  margin-top: 0.3rem;
+  padding: 0.75rem;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+.submit-btn {
+  background-color: var(--primary-color, #003366);
   color: #fff;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem;
+  border: none;
+  padding: 0.85rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 1rem;
 }
 
-.header-container {
+.submit-btn:hover {
+  background-color: var(--secondary-color, #006699);
+}
+
+/* Animación inicial en carga de página para las tarjetas (sin hover) */
+@keyframes fadeInSlide {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-card {
+  animation: fadeInSlide 0.8s ease-in-out forwards;
+}
+
+.membership-cards {
   display: flex;
-  align-items: center;
+  flex-direction: column;
   gap: 1rem;
 }
 
-#menu-btn {
-  font-size: 1.8rem;
-  background: none;
-  border: none;
-  color: #fff;
-  cursor: pointer;
-}
-
-nav {
-  width: 100%;
-  display: none;
-}
-
-nav.open {
-  display: block;
-}
-
-nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 1rem 0 0 0;
-}
-
-nav li a {
-  display: block;
-  padding: 0.75rem;
-  color: #fff;
-  text-decoration: none;
-  text-align: center;
-}
-
-nav li a.active, nav li a:hover {
-  background-color: var(--secondary-color);
-}
-
-main {
-  padding: 1rem;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.view-toggle {
-  text-align: center;
-  margin-bottom: 1.5rem;
-}
-
-.view-toggle button {
-  padding: 0.5rem 1.5rem;
-  margin: 0 0.25rem;
-  font-size: 1rem;
-  border: 1px solid var(--primary-color);
+.membership-cards .card {
   background-color: #fff;
-  cursor: pointer;
-}
-
-.view-toggle button.active-view {
-  background-color: var(--primary-color);
-  color: #fff;
-}
-
-/* Grid Layout View */
-.grid-view {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;
-}
-
-.grid-view section {
-  background-color: var(--card-bg);
   border: 1px solid #ccc;
   border-radius: 8px;
-  padding: 1rem;
+  padding: 1.2rem;
   text-align: center;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-.grid-view img {
-  max-width: 120px;
-  height: auto;
-  margin-bottom: 0.5rem;
-}
-
-/* List Layout View */
-.list-view {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.list-view section {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  align-items: center;
-  background-color: var(--card-bg);
-  padding: 0.75rem;
-  border-bottom: 1px solid #ccc;
-}
-
-.list-view img, .list-view p.tagline {
-  display: none;
-}
-
-footer {
-  background-color: var(--primary-color);
+.modal-btn {
+  margin-top: 0.75rem;
+  padding: 0.5rem 1rem;
+  background-color: var(--secondary-color, #006699);
   color: #fff;
-  padding: 1.5rem;
-  text-align: center;
-  margin-top: 2rem;
-}
-
-/* Hero Section */
-.hero {
-  position: relative;
-  margin-bottom: 2rem;
-}
-
-.hero img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  border-radius: 8px;
-}
-
-.cta-overlay {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: rgba(0, 51, 102, 0.85);
-  color: #fff;
-  padding: 1.5rem;
-  text-align: center;
-  border-radius: 8px;
-  width: 80%;
-}
-
-.cta-btn {
-  display: inline-block;
-  margin-top: 1rem;
-  padding: 0.75rem 1.5rem;
-  background-color: #ff9900;
-  color: #333;
-  text-decoration: none;
-  font-weight: bold;
+  border: none;
   border-radius: 4px;
+  cursor: pointer;
 }
 
-/* Home Grid & Cards */
-.home-grid {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
-.card {
-  background-color: var(--card-bg, #f9f9f9);
-  border: 1px solid #ccc;
+/* Estilos para las ventanas modales (<dialog>) */
+dialog {
+  border: none;
   border-radius: 8px;
-  padding: 1.25rem;
+  padding: 2rem;
+  max-width: 400px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
 }
 
-.spotlight-card {
-  background-color: #fff;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 1rem;
-  margin-bottom: 1rem;
-  text-align: center;
+dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
-.spotlight-card img {
-  max-width: 100px;
-  margin: 0 auto 0.5rem auto;
+dialog button.close-modal {
+  margin-top: 1rem;
+  background-color: var(--primary-color, #003366);
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
 }

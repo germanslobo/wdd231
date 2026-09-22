@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Join the Chamber - Chamber of Commerce</title>
-  <meta name="description" content="Join the local Chamber of Commerce. Membership application coming soon.">
+  <meta name="description" content="Apply for membership in the local Chamber of Commerce. Choose from NP, Bronze, Silver, and Gold levels.">
   <meta name="author" content="German Sanchez Lobo">
 
   <!-- Favicon -->
@@ -19,6 +19,9 @@
   <link rel="stylesheet" href="styles/normalize.css">
   <link rel="stylesheet" href="styles/small.css">
   <link rel="stylesheet" href="styles/larger.css">
+
+  <!-- JavaScript -->
+  <script src="scripts/join.js" defer></script>
 </head>
 <body>
 
@@ -38,13 +41,112 @@
     </nav>
   </header>
 
-  <main style="text-align: center; padding: 4rem 1rem;">
-    <h1>Join the Chamber</h1>
-    <div style="background-color: var(--card-bg, #f9f9f9); border: 1px solid #ccc; border-radius: 8px; padding: 2rem; max-width: 600px; margin: 0 auto;">
-      <h2>Coming Soon!</h2>
-      <p>We are currently building our membership application form. Check back soon to register your business with the Chamber of Commerce.</p>
-      <a href="index.html" class="cta-btn" style="margin-top: 1rem; display: inline-block;">Return to Home</a>
+  <main>
+    <h1>Membership Application</h1>
+
+    <div class="join-container">
+      <!-- Formulario de Solicitud -->
+      <form method="get" action="thankyou.html" class="join-form">
+        
+        <label>First Name *
+          <input type="text" name="first" title="Enter your first name" autocomplete="given-name" required>
+        </label>
+
+        <label>Last Name *
+          <input type="text" name="last" title="Enter your last name" autocomplete="family-name" required>
+        </label>
+
+        <label>Organizational Title
+          <input type="text" name="title" title="At least 7 characters (letters, hyphens, and spaces only)" autocomplete="organization-title" pattern="^[a-zA-Z\s\-]{7,}$" placeholder="e.g. General Manager">
+        </label>
+
+        <label>Email Address *
+          <input type="email" name="email" title="Enter a valid email address" autocomplete="email" placeholder="name@example.com" required>
+        </label>
+
+        <label>Mobile Phone *
+          <input type="tel" name="phone" title="Enter your mobile phone number" autocomplete="tel" placeholder="(555) 123-4567" required>
+        </label>
+
+        <label>Business/Organization Name *
+          <input type="text" name="organization" title="Enter your business or organization name" autocomplete="organization" required>
+        </label>
+
+        <label>Membership Level *
+          <select name="membership" required>
+            <option value="" disabled selected>Choose a membership level...</option>
+            <option value="np">NP Membership (Non-Profit - No Fee)</option>
+            <option value="bronze">Bronze Membership</option>
+            <option value="silver">Silver Membership</option>
+            <option value="gold">Gold Membership</option>
+          </select>
+        </label>
+
+        <label>Business/Organization Description
+          <textarea name="description" title="Provide a brief description of your business or organization" rows="4"></textarea>
+        </label>
+
+        <!-- Campo oculto para la marca de tiempo (Timestamp) -->
+        <input type="hidden" name="timestamp" id="timestamp">
+
+        <input type="submit" value="Apply for Membership" class="submit-btn">
+      </form>
+
+      <!-- Tarjetas de Niveles con Animación y Enlaces a Modales -->
+      <div class="membership-cards">
+        
+        <div class="card animate-card">
+          <h3>NP Membership</h3>
+          <p>For non-profit organizations.</p>
+          <button type="button" class="modal-btn" data-modal="np-modal">Learn More</button>
+        </div>
+
+        <div class="card animate-card">
+          <h3>Bronze Membership</h3>
+          <p>Standard entry-level benefits.</p>
+          <button type="button" class="modal-btn" data-modal="bronze-modal">Learn More</button>
+        </div>
+
+        <div class="card animate-card">
+          <h3>Silver Membership</h3>
+          <p>Includes event discounts & training.</p>
+          <button type="button" class="modal-btn" data-modal="silver-modal">Learn More</button>
+        </div>
+
+        <div class="card animate-card">
+          <h3>Gold Membership</h3>
+          <p>Includes spotlight positions & top benefits.</p>
+          <button type="button" class="modal-btn" data-modal="gold-modal">Learn More</button>
+        </div>
+
+      </div>
     </div>
+
+    <!-- Modales HTML nativos (<dialog>) -->
+    <dialog id="np-modal">
+      <h2>NP Membership Details</h2>
+      <p>Designed strictly for non-profit organizations with zero membership fees. Enjoy basic chamber access and community networking events.</p>
+      <button class="close-modal">Close</button>
+    </dialog>
+
+    <dialog id="bronze-modal">
+      <h2>Bronze Membership Details</h2>
+      <p>Ideal for small local startups. Includes directory listing, entry-level training workshops, and standard event invitations.</p>
+      <button class="close-modal">Close</button>
+    </dialog>
+
+    <dialog id="silver-modal">
+      <h2>Silver Membership Details</h2>
+      <p>Offers increased advertising benefits, discounts on major chamber events, and specialized digital marketing training sessions.</p>
+      <button class="close-modal">Close</button>
+    </dialog>
+
+    <dialog id="gold-modal">
+      <h2>Gold Membership Details</h2>
+      <p>The ultimate package! Includes premium homepage spotlight positions, VIP event access, free training sessions, and maximum organizational visibility.</p>
+      <button class="close-modal">Close</button>
+    </dialog>
+
   </main>
 
   <footer>
@@ -58,19 +160,6 @@
       <p id="lastModified"></p>
     </div>
   </footer>
-
-  <script>
-    // Simple footer script for dates
-    document.getElementById('currentyear').textContent = new Date().getFullYear();
-    document.getElementById('lastModified').textContent = `Last Modification: ${document.lastModified}`;
-    
-    // Simple mobile menu toggle
-    const menuBtn = document.getElementById('menu-btn');
-    const navBar = document.getElementById('nav-bar');
-    menuBtn.addEventListener('click', () => {
-      navBar.classList.toggle('open');
-    });
-  </script>
 
 </body>
 </html>

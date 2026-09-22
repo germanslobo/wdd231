@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thank You - Chamber of Commerce</title>
+  <meta name="description" content="Thank you for applying to join the Chamber of Commerce.">
+  <meta name="author" content="German Sanchez Lobo">
+
+  <!-- Favicon -->
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/larger.css">
+
+  <!-- JavaScript para procesar los datos de la URL -->
+  <script src="scripts/thankyou.js" defer></script>
+</head>
+<body>
+
+  <header>
+    <div class="header-container">
+      <img src="images/logo.svg" alt="Chamber Logo" class="logo" width="60" height="60">
+      <span class="site-title">Chamber of Commerce</span>
+    </div>
+    <button id="menu-btn" aria-label="Toggle Navigation Menu">☰</button>
+    <nav id="nav-bar">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="directory.html">Directory</a></li>
+        <li><a href="join.html">Join</a></li>
+        <li><a href="discover.html">Discover</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main style="max-width: 800px; margin: 2rem auto; padding: 1rem;">
+    <h1>Application Submitted Successfully!</h1>
+    <div style="background-color: var(--card-bg, #f9f9f9); border: 1px solid #ccc; border-radius: 8px; padding: 2rem;">
+      <h2>Thank you for joining, <span id="display-name"></span>!</h2>
+      <p>We have received your application for the Chamber of Commerce. Below are the details you submitted:</p>
+      
+      <ul id="results-list" style="list-style: none; padding: 0; line-height: 2rem; margin-top: 1.5rem;">
+        <!-- Los datos se inyectarán aquí mediante JavaScript -->
+      </ul>
+
+      <a href="index.html" class="cta-btn" style="display: inline-block; margin-top: 1.5rem; text-decoration: none;">Return to Home</a>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-info">
+      <p><strong>Chamber of Commerce</strong></p>
+      <p>Calle Andrés Eloy Blanco, Edificio Cámara de Comercio, Piso 8, Caracas, Venezuela</p>
+      <p>info@chamber.org | (58) 0800 123 456</p>
+    </div>
+    <div class="footer-dev">
+      <p>&copy; <span id="currentyear"></span> | German Sanchez Lobo | WDD 231</p>
+      <p id="lastModified"></p>
+    </div>
+  </footer>
+
+</body>
+</html>
