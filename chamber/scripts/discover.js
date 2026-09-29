@@ -1,30 +1,50 @@
-// Import the items of interest data
+// ============================================================
+// Import the items of interest data (JSON module)
+// ============================================================
 import { itemsOfInterest } from '../data/discover.mjs';
 
-// ============================================
-// 1. POPULATE THE CARDS
-// ============================================
+// ============================================================
+// 1. BUILD THE 8 CARDS
+// ============================================================
 function createCard(item, index) {
   const card = document.createElement('article');
-  card.classList.add('discover-card');
-  // Each card gets a unique grid-area class based on its index (1-8)
-  card.classList.add(`card-${index + 1}`);
+  card.classList.add('discover-card', `card-${index + 1}`);
 
-  card.innerHTML = `
-    <h2>${item.name}</h2>
-    <figure>
-      <img src="images/${item.image}" 
-           alt="${item.name}" 
-           width="300" 
-           height="200" 
-           loading="lazy">
-    </figure>
-    <address>${item.address}</address>
-    <p>${item.description}</p>
-    <button type="button" class="learn-more-btn" aria-label="Learn more about ${item.name}">
-      Learn More
-    </button>
-  `;
+  // h2 (title)
+  const title = document.createElement('h2');
+  title.textContent = item.name;
+
+  // figure + img
+  const figure = document.createElement('figure');
+  const img = document.createElement('img');
+  img.src = `images/${item.image}`;
+  img.alt = item.name;
+  img.width = 300;
+  img.height = 200;
+  img.loading = 'lazy';
+  figure.appendChild(img);
+
+  // address
+  const address = document.createElement('address');
+  address.textContent = item.address;
+
+  // paragraph (description)
+  const description = document.createElement('p');
+  description.textContent = item.description;
+
+  // button (learn more)
+  const button = document.createElement('button');
+  button.type = 'button';
+  button.classList.add('learn-more-btn');
+  button.textContent = 'Learn More';
+  button.setAttribute('aria-label', `Learn more about ${item.name}`);
+
+  // Assemble the card
+  card.appendChild(title);
+  card.appendChild(figure);
+  card.appendChild(address);
+  card.appendChild(description);
+  card.appendChild(button);
 
   return card;
 }
@@ -33,14 +53,17 @@ function displayCards() {
   const grid = document.getElementById('discover-grid');
   if (!grid) return;
 
+  // Clear any existing content (safety)
+  grid.innerHTML = '';
+
   itemsOfInterest.forEach((item, index) => {
     grid.appendChild(createCard(item, index));
   });
 }
 
-// ============================================
-// 2. LOCALSTORAGE VISITOR MESSAGE
-// ============================================
+// ============================================================
+// 2. VISITOR MESSAGE (localStorage)
+// ============================================================
 function displayVisitorMessage() {
   const messageEl = document.getElementById('visitor-message');
   if (!messageEl) return;
@@ -61,7 +84,6 @@ function displayVisitorMessage() {
       // Less than a day
       message = 'Back so soon! Awesome!';
     } else {
-      // More than a day - calculate whole days
       const daysDiff = Math.floor(timeDiff / oneDayMs);
       const dayWord = daysDiff === 1 ? 'day' : 'days';
       message = `You last visited ${daysDiff} ${dayWord} ago.`;
@@ -74,38 +96,36 @@ function displayVisitorMessage() {
   localStorage.setItem('lastVisitDate', now.toString());
 }
 
-// ============================================
-// 3. FOOTER DATES
-// ============================================
+// ============================================================
+// 3. FOOTER DATES (current year + last modified)
+// ============================================================
 function setFooterDates() {
-  const yearEl = document.getElementById('current-year');
-  const modifiedEl = document.getElementById('last-modified');
+  const yearEl = document.getElementById('currentyear');
+  const modifiedEl = document.getElementById('lastModified');
 
   if (yearEl) yearEl.textContent = new Date().getFullYear();
   if (modifiedEl) modifiedEl.textContent = document.lastModified;
 }
 
-// ============================================
-// 4. MOBILE NAVIGATION
-// ============================================
+// ============================================================
+// 4. MOBILE NAVIGATION TOGGLE
+// ============================================================
 function setupNavigation() {
-  const toggle = document.getElementById('menu-toggle');
-  const nav = document.getElementById('main-nav');
+  const toggle = document.getElementById('menu-btn');
+  const nav = document.getElementById('nav-bar');
 
   if (toggle && nav) {
     toggle.addEventListener('click', () => {
       nav.classList.toggle('open');
-      toggle.setAttribute(
-        'aria-expanded',
-        nav.classList.contains('open') ? 'true' : 'false'
-      );
+      const isOpen = nav.classList.contains('open');
+      toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
     });
   }
 }
 
-// ============================================
-// INITIALIZE
-// ============================================
+// ============================================================
+// INITIALIZE ON DOM READY
+// ============================================================
 document.addEventListener('DOMContentLoaded', () => {
   displayCards();
   displayVisitorMessage();
