@@ -1,0 +1,32 @@
+/* ============================================
+   DISCOVER PAGE - MEDIUM SCREENS (641px - 1024px)
+   2-column layout with named areas
+   ============================================ */
+
+@media (min-width: 641px) {
+  .discover-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "card1 card2"
+      "card3 card4"
+      "card5 card6"
+      "card7 card8";
+    gap: 1.5rem;
+    padding: 1.5rem;
+  }
+
+  /* Hover effects START here (not on mobile) */
+  .discover-card img {
+    transition: transform 0.3s ease, filter 0.3s ease, opacity 0.3s ease;
+  }
+
+  .discover-card img:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1) saturate(1.2);
+    opacity: 0.9;
+  }
+
+  .discover-card figure {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  }
+}
