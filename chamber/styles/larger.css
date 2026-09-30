@@ -64,6 +64,8 @@
     padding: 2rem 0;
     max-width: 1400px;
     margin: 0 auto;
+    /* FIX: Alinea las cards a la misma altura */
+    align-items: stretch;
   }
 
   /* Make some cards span multiple rows for visual interest */
@@ -75,6 +77,22 @@
     grid-row: span 2;
   }
 
+  /* FIX: Asegura que las cards llenen el espacio asignado */
+  .discover-card {
+    height: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .discover-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  }
+
+  /* FIX: El párrafo crece para empujar el botón al fondo */
+  .discover-card p {
+    flex-grow: 1;
+  }
+
   /* Enhanced hover effects for large screens */
   .discover-card img {
     transition: transform 0.4s ease, filter 0.4s ease, box-shadow 0.4s ease;
@@ -84,14 +102,5 @@
     transform: scale(1.08) rotate(1deg);
     filter: brightness(1.15) contrast(1.05) saturate(1.3);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-  }
-
-  .discover-card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-
-  .discover-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
   }
 }

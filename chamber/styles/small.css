@@ -482,15 +482,20 @@ dialog button.close-modal:hover {
   color: var(--primary-color);
 }
 
+/* --- FIX: Imagen con proporción uniforme 3:2 --- */
 .discover-card figure {
   margin: 0 0 0.75rem 0;
   overflow: hidden;
   border-radius: 4px;
+  aspect-ratio: 3 / 2;
+  background-color: #eee;
 }
 
 .discover-card img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
   display: block;
   /* NO hover effects on mobile */
 }
