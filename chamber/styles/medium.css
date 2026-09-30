@@ -1,9 +1,64 @@
 /* ============================================
-   DISCOVER PAGE - MEDIUM SCREENS (641px - 1024px)
-   2-column layout with named areas
+   MEDIUM SCREENS (641px - 1024px)
    ============================================ */
 
 @media (min-width: 641px) {
+
+  /* ============================================
+     HEADER & NAV — Horizontal layout
+     ============================================ */
+  #menu-btn {
+    display: none;
+  }
+
+  #nav-bar {
+    display: block !important;
+    margin-top: 0;
+  }
+
+  #nav-bar ul {
+    flex-direction: row;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  /* ============================================
+     HOME PAGE
+     ============================================ */
+  .home-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+
+  .spotlights-container {
+    grid-column: 1 / -1;
+  }
+
+  .spotlight-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+
+  /* ============================================
+     DIRECTORY PAGE
+     ============================================ */
+  #members-container.grid-view {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  /* ============================================
+     JOIN PAGE
+     ============================================ */
+  .membership-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+  }
+
+  /* ============================================
+     DISCOVER PAGE — 2-column layout
+     ============================================ */
   .discover-grid {
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
@@ -12,10 +67,10 @@
       "card5 card6"
       "card7 card8";
     gap: 1.5rem;
-    padding: 1.5rem;
+    padding: 1.5rem 0;
   }
 
-  /* Hover effects START here (not on mobile) */
+  /* Hover effects START here (NOT on mobile) */
   .discover-card img {
     transition: transform 0.3s ease, filter 0.3s ease, opacity 0.3s ease;
   }

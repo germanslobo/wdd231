@@ -1,9 +1,59 @@
 /* ============================================
-   DISCOVER PAGE - LARGE SCREENS (1025px+)
-   Complex multi-column layout with named areas
+   LARGE SCREENS (1025px and up)
    ============================================ */
 
 @media (min-width: 1025px) {
+
+  /* ============================================
+     HEADER & NAV — Horizontal layout
+     ============================================ */
+  #menu-btn {
+    display: none;
+  }
+
+  #nav-bar {
+    display: block !important;
+    margin-top: 0;
+  }
+
+  #nav-bar ul {
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .header-container {
+    justify-content: flex-start;
+  }
+
+  /* ============================================
+     HOME PAGE
+     ============================================ */
+  .home-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+
+  .spotlights-container {
+    grid-column: 1 / -1;
+  }
+
+  .spotlight-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  /* ============================================
+     DIRECTORY PAGE
+     ============================================ */
+  #members-container.grid-view {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  /* ============================================
+     DISCOVER PAGE — Complex multi-column layout
+     ============================================ */
   .discover-grid {
     grid-template-columns: repeat(4, 1fr);
     grid-template-areas:
@@ -11,9 +61,18 @@
       "card4 card5 card2 card6"
       "card7 card8 card8 card6";
     gap: 2rem;
-    padding: 2rem;
+    padding: 2rem 0;
     max-width: 1400px;
     margin: 0 auto;
+  }
+
+  /* Make some cards span multiple rows for visual interest */
+  .card-2 {
+    grid-row: span 2;
+  }
+
+  .card-6 {
+    grid-row: span 2;
   }
 
   /* Enhanced hover effects for large screens */
@@ -34,14 +93,5 @@
   .discover-card:hover {
     transform: translateY(-4px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-  }
-
-  /* Make some cards span multiple rows for visual interest */
-  .card-2 {
-    grid-row: span 2;
-  }
-
-  .card-6 {
-    grid-row: span 2;
   }
 }
