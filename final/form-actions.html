@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thank You | AutomateFlow Solutions</title>
+  <meta name="description" content="Your automation consultation request has been received by AutomateFlow Solutions.">
+  <meta name="author" content="German Sanchez Lobo">
+
+  <meta property="og:title" content="Thank You | AutomateFlow Solutions">
+  <meta property="og:description" content="We received your request.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="images/favicon.ico">
+
+  <link rel="icon" type="image/webp" href="images/favicon.ico">
+
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/large.css" media="screen and (min-width: 640px)">
+
+  <meta name="robots" content="noindex">
+</head>
+<body>
+
+  <header>
+    <a href="index.html" class="brand">
+      <img src="images/favicon.webp" alt="" width="32" height="32">
+      AutomateFlow
+    </a>
+    <button id="menuBtn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="primaryNav">☰</button>
+    <nav id="primaryNav" aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Thank You! 🎉</h1>
+    <p>Your consultation request has been received. We'll respond within one business day.</p>
+
+    <section class="form-recap" aria-labelledby="recapHeading">
+      <h2 id="recapHeading">Your Submission</h2>
+      <dl id="recapList" class="recap-list"></dl>
+      <p id="emptyMsg" hidden>No form data was received. Please return to the <a href="contact.html">contact page</a> to submit a request.</p>
+    </section>
+
+    <p style="margin-top:1.5rem;">
+      <a href="contact.html" class="btn btn-primary">← Back to Contact</a>
+      <a href="services.html" class="btn-outline-dark" style="margin-left:0.5rem;">Browse Services</a>
+    </p>
+  </main>
+
+  <footer>
+    <div class="foot-links">
+      <a href="attributions.html">Attributions</a>
+      <a href="https://youtu.be/V-stMVX2uFY" target="_blank" rel="noopener">Project Video</a>
+      <a href="https://github.com/yourusername/wdd231" target="_blank" rel="noopener">GitHub</a>
+    </div>
+    <p>&copy; <span id="year"></span> AutomateFlow Solutions.</p>
+  </footer>
+
+  <script type="module" src="scripts/form-action.js"></script>
+</body>
+</html>

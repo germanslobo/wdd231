@@ -1,0 +1,36 @@
+@media (min-width: 640px) {
+  header { flex-wrap: nowrap; }
+  #menuBtn { display: none; }
+
+  nav { width: auto; }
+  nav ul {
+    display: flex !important;
+    flex-direction: row;
+    background: transparent;
+    padding: 0;
+    gap: 0.25rem;
+  }
+  nav a {
+    padding: 0.5rem 0.9rem;
+    border-left: none;
+    border-bottom: 3px solid transparent;
+    border-radius: 6px;
+  }
+  nav a[aria-current="page"] {
+    border-left: none;
+    border-bottom-color: var(--clr-primary);
+  }
+
+  main { padding: 2rem 1.5rem; }
+
+  .hero { padding: 3rem 2rem; }
+  h1 { font-size: 2.25rem; }
+  h2 { font-size: 1.6rem; }
+
+  .features { grid-template-columns: repeat(3, 1fr); }
+  .services-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (min-width: 960px) {
+  .services-grid { grid-template-columns: repeat(3, 1fr); }
+}

@@ -1,0 +1,180 @@
+{
+  "services": [
+    {
+      "id": 1,
+      "name": "n8n Workflow Automation",
+      "category": "Integration",
+      "price": 1200,
+      "duration": "2 weeks",
+      "description": "Custom n8n workflows connecting your CRM, email, and databases.",
+      "image": "images/n8n-workflow.webp",
+      "imageAlt": "n8n workflow editor showing connected automation nodes.",
+      "popular": true
+    },
+    {
+      "id": 2,
+      "name": "AI Chatbot Development",
+      "category": "AI",
+      "price": 2500,
+      "duration": "3 weeks",
+      "description": "Intelligent chatbots powered by GPT for customer support.",
+      "image": "images/chatbots.webp",
+      "imageAlt": "Person interacting with an AI chatbot interface on a laptop.",
+      "popular": true
+    },
+    {
+      "id": 3,
+      "name": "API Integration Audit",
+      "category": "Consulting",
+      "price": 800,
+      "duration": "1 week",
+      "description": "Full review of your existing API endpoints and security.",
+      "image": "images/api-integration-audit.webp",
+      "imageAlt": "API integration audit dashboard with code and metrics on screen.",
+      "popular": false
+    },
+    {
+      "id": 4,
+      "name": "Trading Bot Automation",
+      "category": "Finance",
+      "price": 3500,
+      "duration": "4 weeks",
+      "description": "Algorithmic trading bots with real-time market data feeds.",
+      "image": "images/trading-bots.webp",
+      "imageAlt": "Trader analyzing live market data and trading bot charts.",
+      "popular": true
+    },
+    {
+      "id": 5,
+      "name": "Webhook Orchestration",
+      "category": "Integration",
+      "price": 950,
+      "duration": "1 week",
+      "description": "Reliable webhook pipelines with retry and monitoring.",
+      "image": "images/webhook-orchestration.webp",
+      "imageAlt": "Illustration of webhook events flowing between cloud services.",
+      "popular": false
+    },
+    {
+      "id": 6,
+      "name": "Data Pipeline Setup",
+      "category": "Data",
+      "price": 1800,
+      "duration": "2 weeks",
+      "description": "ETL pipelines moving data between SaaS platforms.",
+      "image": "images/data-pipeline.webp",
+      "imageAlt": "Abstract data pipeline visualization with connected nodes.",
+      "popular": false
+    },
+    {
+      "id": 7,
+      "name": "Slack/Teams Bot",
+      "category": "AI",
+      "price": 1400,
+      "duration": "2 weeks",
+      "description": "Custom bots for internal team notifications and commands.",
+      "image": "images/chatbots.webp",
+      "imageAlt": "Chatbot conversation bubble interface.",
+      "popular": false
+    },
+    {
+      "id": 8,
+      "name": "Zapier Migration",
+      "category": "Integration",
+      "price": 700,
+      "duration": "1 week",
+      "description": "Migrate from Zapier to self-hosted n8n to cut costs.",
+      "image": "images/n8n-workflow.webp",
+      "imageAlt": "Automation nodes moving data between apps.",
+      "popular": true
+    },
+    {
+      "id": 9,
+      "name": "Email Automation Suite",
+      "category": "Marketing",
+      "price": 1100,
+      "duration": "2 weeks",
+      "description": "Automated drip campaigns and transactional emails.",
+      "image": "images/api-integration-audit.webp",
+      "imageAlt": "Email automation dashboard with campaign analytics.",
+      "popular": false
+    },
+    {
+      "id": 10,
+      "name": "Database Sync Service",
+      "category": "Data",
+      "price": 1600,
+      "duration": "2 weeks",
+      "description": "Two-way sync between PostgreSQL, MySQL, and Airtable.",
+      "image": "images/data-pipeline.webp",
+      "imageAlt": "Database synchronization diagram with two-way arrows.",
+      "popular": false
+    },
+    {
+      "id": 11,
+      "name": "Invoice Processing Bot",
+      "category": "Finance",
+      "price": 2200,
+      "duration": "3 weeks",
+      "description": "OCR + AI extraction of invoices into your accounting system.",
+      "image": "images/trading-bots.webp",
+      "imageAlt": "Financial analyst reviewing automated invoice processing.",
+      "popular": true
+    },
+    {
+      "id": 12,
+      "name": "Social Media Scheduler",
+      "category": "Marketing",
+      "price": 900,
+      "duration": "1 week",
+      "description": "Automated posting across Twitter, LinkedIn, and Facebook.",
+      "image": "images/api-integration-audit.webp",
+      "imageAlt": "Social media scheduling dashboard on a screen.",
+      "popular": false
+    },
+    {
+      "id": 13,
+      "name": "CRM Enrichment Engine",
+      "category": "Data",
+      "price": 1300,
+      "duration": "2 weeks",
+      "description": "Auto-enrich leads with company and contact data.",
+      "image": "images/data-pipeline.webp",
+      "imageAlt": "Data enrichment pipeline connecting to a CRM.",
+      "popular": false
+    },
+    {
+      "id": 14,
+      "name": "Serverless Function Setup",
+      "category": "Cloud",
+      "price": 1500,
+      "duration": "2 weeks",
+      "description": "AWS Lambda / Cloudflare Workers for event-driven tasks.",
+      "image": "images/webhook-orchestration.webp",
+      "imageAlt": "Cloud serverless function diagram with event triggers.",
+      "popular": false
+    },
+    {
+      "id": 15,
+      "name": "Monitoring & Alerts",
+      "category": "Cloud",
+      "price": 600,
+      "duration": "1 week",
+      "description": "Uptime, error tracking, and Slack alerting for workflows.",
+      "image": "images/webhook-orchestration.webp",
+      "imageAlt": "Monitoring dashboard with uptime charts and alerts.",
+      "popular": true
+    },
+    {
+      "id": 16,
+      "name": "Custom GPT Actions",
+      "category": "AI",
+      "price": 2800,
+      "duration": "3 weeks",
+      "description": "Connect ChatGPT to your internal APIs via custom actions.",
+      "image": "images/chatbots.webp",
+      "imageAlt": "AI assistant connecting to internal business APIs.",
+      "popular": true
+    }
+  ]
+}

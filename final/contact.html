@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | AutomateFlow Solutions</title>
+  <meta name="description" content="Contact AutomateFlow Solutions for custom n8n workflows, AI chatbots, and API integration consulting. Request a free consultation today.">
+  <meta name="author" content="German Sanchez Lobo">
+
+  <meta property="og:title" content="Contact | AutomateFlow Solutions">
+  <meta property="og:description" content="Request a free automation consultation.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="images/api-integration-audit.webp">
+  <meta property="og:url" content="https://yourusername.github.io/wdd231/final/contact.html">
+
+  <link rel="icon" type="image/webp" href="images/favicon.ico">
+
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/large.css" media="screen and (min-width: 640px)">
+</head>
+<body>
+
+  <header>
+    <a href="index.html" class="brand">
+      <img src="images/favicon.webp" alt="" width="32" height="32">
+      AutomateFlow
+    </a>
+    <button id="menuBtn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="primaryNav">☰</button>
+    <nav id="primaryNav" aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html" aria-current="page">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Let's Build Your Automation</h1>
+    <p>Tell us about your workflow bottleneck. We'll respond within one business day.</p>
+
+    <section class="contact-layout">
+      <!-- LEFT: Form -->
+      <div>
+        <h2>Request a Consultation</h2>
+        <form id="contactForm" method="get" action="form-action.html" novalidate>
+          <div>
+            <label for="fullName">Full Name <span class="required" aria-hidden="true">*</span></label>
+            <input type="text" id="fullName" name="fullName" required
+                   autocomplete="name" minlength="2" maxlength="60">
+          </div>
+
+          <div>
+            <label for="email">Email <span class="required" aria-hidden="true">*</span></label>
+            <input type="email" id="email" name="email" required
+                   autocomplete="email" placeholder="you@company.com">
+          </div>
+
+          <div>
+            <label for="phone">Phone (optional)</label>
+            <input type="tel" id="phone" name="phone"
+                   autocomplete="tel" pattern="[0-9+()\-\s]{7,20}">
+          </div>
+
+          <div>
+            <label for="service">Service of Interest <span class="required" aria-hidden="true">*</span></label>
+            <select id="service" name="service" required>
+              <option value="">— Loading services… —</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="contactMethod">Preferred Contact Method</label>
+            <select id="contactMethod" name="contactMethod">
+              <option value="email">Email</option>
+              <option value="phone">Phone</option>
+              <option value="video">Video Call</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="budget">Estimated Budget</label>
+            <select id="budget" name="budget">
+              <option value="under-1k">Under $1,000</option>
+              <option value="1k-2k">$1,000 – $2,000</option>
+              <option value="2k-5k">$2,000 – $5,000</option>
+              <option value="5k-plus">$5,000+</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="message">Project Details <span class="required" aria-hidden="true">*</span></label>
+            <textarea id="message" name="message" required
+                      minlength="10" maxlength="1000"
+                      placeholder="Describe the workflow you want to automate..."></textarea>
+          </div>
+
+          <div>
+            <label for="newsletter" class="checkbox-label">
+              <input type="checkbox" id="newsletter" name="newsletter" value="yes">
+              Send me automation tips and product updates.
+            </label>
+          </div>
+
+          <button type="submit" class="btn btn-primary">Send Request</button>
+
+          <p id="formStatus" class="status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+
+      <!-- RIGHT: Info card + last visit recap -->
+      <aside>
+        <div class="card">
+          <h2>Get in Touch Directly</h2>
+          <p><strong>Email:</strong> hello@automateflow.example</p>
+          <p><strong>Hours:</strong> Mon–Fri, 9am–6pm EST</p>
+          <p><strong>Response time:</strong> Within 24 hours</p>
+        </div>
+
+        <div class="card" id="recapCard" hidden>
+          <h2>Welcome Back 👋</h2>
+          <p id="recapText"></p>
+          <button type="button" id="clearRecap" class="btn-outline-dark">Clear saved preferences</button>
+        </div>
+      </aside>
+    </section>
+  </main>
+
+  <footer>
+    <div class="foot-links">
+      <a href="attributions.html">Attributions</a>
+      <a href="https://youtu.be/V-stMVX2uFY" target="_blank" rel="noopener">Project Video</a>
+      <a href="https://github.com/yourusername/wdd231" target="_blank" rel="noopener">GitHub</a>
+    </div>
+    <p>&copy; <span id="year"></span> AutomateFlow Solutions. All rights reserved.</p>
+  </footer>
+
+  <script type="module" src="scripts/contact.js"></script>
+</body>
+</html>
