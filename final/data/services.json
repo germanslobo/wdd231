@@ -84,7 +84,7 @@
       "price": 700,
       "duration": "1 week",
       "description": "Migrate from Zapier to self-hosted n8n to cut costs.",
-      "image": "images/n8n-workflow.webp",
+      "image": "images/zapierintegration.webp",
       "imageAlt": "Automation nodes moving data between apps.",
       "popular": true
     },
@@ -95,7 +95,7 @@
       "price": 1100,
       "duration": "2 weeks",
       "description": "Automated drip campaigns and transactional emails.",
-      "image": "images/api-integration-audit.webp",
+      "image": "images/emailautomationsuite.webp",
       "imageAlt": "Email automation dashboard with campaign analytics.",
       "popular": false
     },
@@ -106,7 +106,7 @@
       "price": 1600,
       "duration": "2 weeks",
       "description": "Two-way sync between PostgreSQL, MySQL, and Airtable.",
-      "image": "images/data-pipeline.webp",
+      "image": "images/databasesyncservice.webp",
       "imageAlt": "Database synchronization diagram with two-way arrows.",
       "popular": false
     },
@@ -117,7 +117,7 @@
       "price": 2200,
       "duration": "3 weeks",
       "description": "OCR + AI extraction of invoices into your accounting system.",
-      "image": "images/trading-bots.webp",
+      "image": "images/invoiceprocessingbot.webp",
       "imageAlt": "Financial analyst reviewing automated invoice processing.",
       "popular": true
     },
@@ -128,7 +128,7 @@
       "price": 900,
       "duration": "1 week",
       "description": "Automated posting across Twitter, LinkedIn, and Facebook.",
-      "image": "images/api-integration-audit.webp",
+      "image": "images/socialmediascheduler.webp",
       "imageAlt": "Social media scheduling dashboard on a screen.",
       "popular": false
     },
@@ -139,7 +139,7 @@
       "price": 1300,
       "duration": "2 weeks",
       "description": "Auto-enrich leads with company and contact data.",
-      "image": "images/data-pipeline.webp",
+      "image": "images/crmenrichmentengine.webp",
       "imageAlt": "Data enrichment pipeline connecting to a CRM.",
       "popular": false
     },
@@ -150,7 +150,7 @@
       "price": 1500,
       "duration": "2 weeks",
       "description": "AWS Lambda / Cloudflare Workers for event-driven tasks.",
-      "image": "images/webhook-orchestration.webp",
+      "image": "images/serverlessfunctionsetup.webp",
       "imageAlt": "Cloud serverless function diagram with event triggers.",
       "popular": false
     },
@@ -161,7 +161,7 @@
       "price": 600,
       "duration": "1 week",
       "description": "Uptime, error tracking, and Slack alerting for workflows.",
-      "image": "images/webhook-orchestration.webp",
+      "image": "images/monitoringalerts.webp",
       "imageAlt": "Monitoring dashboard with uptime charts and alerts.",
       "popular": true
     },
@@ -172,7 +172,7 @@
       "price": 2800,
       "duration": "3 weeks",
       "description": "Connect ChatGPT to your internal APIs via custom actions.",
-      "image": "images/chatbots.webp",
+      "image": "images/customgptactions.webp",
       "imageAlt": "AI assistant connecting to internal business APIs.",
       "popular": true
     }
