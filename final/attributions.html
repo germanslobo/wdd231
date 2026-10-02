@@ -15,16 +15,36 @@
   <meta property="og:url" content="https://germanslobo.github.io/wdd231/final/attributions.html">
 
   <!-- Favicon -->
-  <link rel="icon" type="image/webp" href="images/favicon.webp">
+  <link rel="icon" type="image/webp" href="images/favicon.ico">
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/large.css">
+
   <meta name="robots" content="noindex">
 </head>
 <body>
+
+  <header>
+    <a href="index.html" class="brand">
+      <img src="images/favicon.webp" alt="" width="32" height="32">
+      AutomateFlow
+    </a>
+    <button id="menuBtn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="primaryNav">☰</button>
+    <nav id="primaryNav" aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
   <main>
     <h1>Attributions</h1>
     <p>This page credits the external sources used in building the AutomateFlow Solutions website.</p>
@@ -85,5 +105,16 @@
 
     <p><a href="index.html">← Back to Home</a></p>
   </main>
+
+  <footer>
+    <div class="foot-links">
+      <a href="attributions.html">Attributions</a>
+      <a href="https://youtu.be/V-stMVX2uFY" target="_blank" rel="noopener">Project Video</a>
+      <a href="https://github.com/germanslobo/wdd231" target="_blank" rel="noopener">GitHub</a>
+    </div>
+    <p>&copy; <span id="year"></span> AutomateFlow Solutions. All rights reserved.</p>
+  </footer>
+
+  <script type="module" src="scripts/attributions.js"></script>
 </body>
 </html>
